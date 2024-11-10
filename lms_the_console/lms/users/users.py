@@ -25,4 +25,26 @@ class User:
         self.email = email
         self.role = role
 
- 
+    def __repr__(self):
+        """Returns a string representation of an object"""
+
+        return "User(ID={}, Name={}, Email={}, Role{})".format(
+                self.uid, self.name, self.email, self.role)
+
+    # Getter and Setter for uid attribute
+    @property
+    def uid(self):
+        """Getter for __uid attribute"""
+
+        return self.__uid
+
+    @uid.setter
+    def uid(self, value):
+        """Setter for __uid attribute"""
+
+        if not isinstance(value, int):
+            raise exceptions.InvalidIDError("Invalid ID! Must be a number.")
+        if len(value) < 6 or len(value) > 12:
+            raise exceptions.InvalidIDError("Invalid ID! Must contain 6 to 12 digits.")
+
+        self.__uid = value
