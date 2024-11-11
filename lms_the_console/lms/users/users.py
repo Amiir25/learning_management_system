@@ -43,7 +43,7 @@ class User:
         """Setter for __uid attribute"""
 
         if not isinstance(value, int):
-            raise exceptions.InvalidIDError("Invalid ID! Must be a number.")
+            raise exceptions.InvalidIDError("Invalid ID! Must be only number.")
         if len(value) < 6 or len(value) > 12:
             raise exceptions.InvalidIDError("Invalid ID! Must contain 6 to 12 digits.")
 
