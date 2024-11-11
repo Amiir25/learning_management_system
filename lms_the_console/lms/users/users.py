@@ -17,7 +17,7 @@ class User:
         uid (int) 	- User ID
         name (string)	- User name
         email (string)	- Email address
-        role (string)	- Role of the user (Admin, Student, Instructore) 
+        role (string)	- Role of the user (Admin, Student, Instructore...)
         """
 
         self.uid = uid
